@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Qoutation Review</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+       
+    </head>
+    <body>
+       <div class="container">
+           <div class="row">
+               <div class="col "> <img src="download.png"></div>
+               <div class="col ">
+             
+    <ul class="list-group">
+    <li class="list-group-item"><%=address.line1%></li>
+    <li class="list-group-item"><%=address.locality%></li>
+    <li class="list-group-item"><%=address.city%>, <%=address.state%></li>
+    <li class="list-group-item"><%=address.pincode%></li>
+    <li class="list-group-item"><%=address.country%></li>
+    </ul>    
+           </div>
+               <div class="col">
+                   
+                       <ul>
+                        <li class="list-group-item"> 
+                            <div class="row">  
+                                <div class="col"><p>Created at</p><span><%=qoute.createdAt%></span></div>
+                                <div class="col"><P>Valid From</P><span></span><%=qoute.validF%></div>
+                                <div class="col"><p>Valid Till</p><span><%=qoute.validT%></span></div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col"><p>Mode</p><span><%=qoute.mode%></span></div>
+                                <div class="col"><P>Incoterm</P><span><%=qoute.incoterm%></span></div>
+                            </div>
+                         </li>
+                        <li class="list-group-item ">
+                            <div class="row">
+                                <div class="col"><p>Customs <%=qoute.custom%></p></div>
+                                <div class="col"><P>perishable <%=qoute.perishable%></P></div>
+                                <div class="col"><p>hazardous <%=qoute.hazardous%></p></div>
+                                <div class="col"><p>Insurance <%=qoute.insurance%></p></div>
+                            </div>
+                        </li>
+                            </ul> 
+                    
+                </div>
+               </div>
+           </div><br>
+           <div class="container">
+
+               <div class="row">
+                <div class="col">
+                    <ul class="list-group">
+                        <li class="list-group-item">To</li>
+                        <li class="list-group-item" style="border: 1px solid black;"><%=customer.name%></li>
+                        <li class="list-group-item">Contact</li>
+                        <li class="list-group-item" style="border: 1px solid black;"><%=customer.contact%></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>Customer Address</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item"><%=addresss.line1%></li>
+                        <li class="list-group-item"><%=addresss.locality%></li>
+                        <li class="list-group-item"><%=addresss.city%>, <%=addresss.state%></li>
+                        <li class="list-group-item"><%=addresss.pincode%></li>
+                        <li class="list-group-item"><%=addresss.country%></li>
+                        </ul>   
+                </div>
+               </div> 
+           </div>
+           <br>
+        <div class="container">
+            <ul class="list-group"> <li class="list-group-item"> <div class="row">
+                <div class="col"><p>Origin</p><span><%=data.origin%></span></div>
+                <div class="col"><p>Pickup Date</p><span><%=data.pickup%></span></div>
+                <div class="col"><p>Destination</p><span><%=data.destination%></span></div>
+                <div class="col"><p>delivery Date</p><span><%=data.delivery%></span></div>
+            </div> </li></ul>
+           
+        </div> <br> 
+        <div class="container ma-5">
+        <h5>Load Details</h5>       
+                    <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                            <th scope="col">Load</th>
+                            <th scope="col">weight</th>
+                            <th scope="col">volume</th>
+                            <th scope="col">B/L</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <% if (Loads.length > 0) { %>
+                                <% Loads.forEach(Load => {%>
+                                   <tr><td><%= Load.name %></td><td><%= Load.weight %></td><td><%= Load.volume %></td><td><%=Load.ratio %></td></tr>
+                                <%  });%>
+                            <% }%>
+                        </tbody>
+                      </table>
+               
+             </div>
+             <div class="container">
+                <h5>Carrier Company Details</h5>
+                     <div class="row"> 
+                        <div class="col"></div>
+                        <div class="col">
+                            <ul class="list-group">
+                                <li class="list-group-item"><%=carrier.name%></li>
+                                <li class="list-group-item">Service reference  <%= carrier.service%></li>
+                                <li class="list-group-item">Transit Port</li>
+                                <li class="list-group-item">Commodity-Rate Classification   FAK</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+              
+
+            
+            
+           
+        </div>
+         
+
+       
+      
+
+
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+       
+    </body>
+</html>
+
+
+
+
+
+ 
