@@ -6,7 +6,9 @@
        
     </head>
     <body>
-       <div class="container">
+        
+        <h3 style="background-color: darkblue;color: white;padding: 10px 10px;margin:10px 10px">Quotation Details</h3>
+       <div class="container" style="font-size:small;font-weight: bold;color: black; ">
            <div class="row">
                <div class="col "> <img src="download.png"></div>
                <div class="col ">
@@ -48,19 +50,19 @@
                 </div>
                </div>
            </div><br>
-           <div class="container">
+           <div class="container" style="font-size:small;font-weight: bold;color: black; ">
 
                <div class="row">
                 <div class="col">
                     <ul class="list-group">
                         <li class="list-group-item">To</li>
-                        <li class="list-group-item" style="border: 1px solid black;"><%=customer.name%></li>
+                        <li class="list-group-item"><%=customer.name%></li>
                         <li class="list-group-item">Contact</li>
-                        <li class="list-group-item" style="border: 1px solid black;"><%=customer.contact%></li>
+                        <li class="list-group-item"><%=customer.contact%></li>
                     </ul>
                 </div>
                 <div class="col">
-                    <h3>Customer Address</h3>
+                    <h4 style="background-color: darkblue;color: white;padding: 10px 10px;margin:10px 10px">Customer Address</h4>
                     <ul class="list-group">
                         <li class="list-group-item"><%=addresss.line1%></li>
                         <li class="list-group-item"><%=addresss.locality%></li>
@@ -72,17 +74,17 @@
                </div> 
            </div>
            <br>
-        <div class="container">
-            <ul class="list-group"> <li class="list-group-item"> <div class="row">
+        <div class="container" style="font-size:small;font-weight: bold;color: black; ">
+            <ul class="list-group"> <li class="list-group-item"> <div class="row"  > 
                 <div class="col"><p>Origin</p><span><%=data.origin%></span></div>
                 <div class="col"><p>Pickup Date</p><span><%=data.pickup%></span></div>
                 <div class="col"><p>Destination</p><span><%=data.destination%></span></div>
-                <div class="col"><p>delivery Date</p><span><%=data.delivery%></span></div>
+                <div class="col"><p>Delivery Date</p><span><%=data.delivery%></span></div>
             </div> </li></ul>
            
         </div> <br> 
-        <div class="container ma-5">
-        <h5>Load Details</h5>       
+        <div class="container ma-5" style="font-size:small;font-weight: bold;color: black; ">
+        <h5 style="background-color: darkblue;color: white;padding: 10px 10px;margin:10px 10px">Load Details</h5>       
                     <table class="table table-bordered">
                         <thead>
                           <tr>
@@ -102,8 +104,8 @@
                       </table>
                
              </div>
-             <div class="container">
-                <h5>Carrier Company Details</h5>
+             <div class="container" style="font-size:small;font-weight: bold;color: black; ">
+                <h5 style="background-color: darkblue;color: white;padding: 10px 10px;margin:10px 10px">Carrier Company Details</h5>
                      <div class="row"> 
                         <div class="col"></div>
                         <div class="col">
